@@ -5,8 +5,8 @@ import './Header.css'
 const Header = () => {
 
     return(
-        <div>
-            
+        <div className="header-conteiner">
+            <h1>Forex</h1>
         </div>
     );
 

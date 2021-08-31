@@ -1,6 +1,32 @@
 .currency-box {
     margin: auto;
     width: 50%;
-    border: 3px solid green;
-    padding: 10px;
+    border-bottom: 1px solid rgb(179, 182, 182);
+    padding: 1px;
+    display:inline-flex;
+    background-color: rgb(222, 247, 242);
+  }
+.names-container{
+  width: 50%;
+}
+  .pair-image{
+    
+    height: 36px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .short-name{
+    color: rgb(15, 161, 219);
+
+  }
+  .full-name{
+     
+  }
+
+  .value-conainer{
+    width: 100%;
+  }
+  .values{
+    float: right;
   }
