@@ -7,7 +7,7 @@ type BoxProp = {
   fullName: string;
   value: string;
   image: any;
-  valueStyle:string;
+  valueStyle: string;
 };
 
 const PairBox = (props: BoxProp) => {
@@ -19,9 +19,18 @@ const PairBox = (props: BoxProp) => {
         <p className="full-name">{props.fullName}</p>
       </div>
       <div className="value-conainer">
-      <p  className={`values ${props.valueStyle==='green' ? 'green' : props.valueStyle==='' ? '' :'red'} `}>{props.value}</p>
+        <p
+          className={`values ${
+            props.valueStyle === "green"
+              ? "green"
+              : props.valueStyle === ""
+              ? ""
+              : "red"
+          } `}
+        >
+          {props.value}
+        </p>
       </div>
-     
     </div>
   );
 };
