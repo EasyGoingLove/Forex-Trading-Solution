@@ -30,3 +30,11 @@
   .values{
     float: right;
   }
+  .values.green{
+    float: right;
+    background-color: rgb(12, 231, 12);
+  }
+  .values.red{
+    float: right;
+    background-color: rgb(238, 69, 69);
+  }
