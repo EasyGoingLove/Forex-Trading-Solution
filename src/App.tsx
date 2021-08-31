@@ -1,8 +1,9 @@
-import React from 'react';
+import React,{lazy } from 'react';
 import './App.css';
 import { JSXElement } from '@babel/types';
 import PairBox from './componenets/PairBox/PairBox'
 import data from './Data/currencies.json'
+import imgs from './Data/ImgPaths'
 
 
 
@@ -15,11 +16,14 @@ const App = () => {
   const shortNames = Object.keys(data.rates);
   
   
+  
   return (
       <div className="App">
 
       {fullNames.map((element:string,index:number) => {
         return <PairBox 
+        key={`ID:${index}`}
+        image={imgs[index]}
         shortName={`EUR${shortNames[index]}`}
         fullName={`Euro / ${element}`}
         value={values[index]}
