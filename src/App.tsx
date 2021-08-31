@@ -41,7 +41,7 @@ const App = () => {
         if (count / 6 === 10) {
           setTicking(false);
         }
-      }, 500);
+      }, 5000);
       return () => clearInterval(interval);
     }
   }, [count, stValues, ticking, values]);
