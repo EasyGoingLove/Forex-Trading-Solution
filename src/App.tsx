@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { JSXElement } from '@babel/types';
+import PairBox from './componenets/PairBox/PairBox'
+import data from './Data/currencies.json'
 
-function App() {
+
+
+
+
+const App = () => {
+  
+  const fullNames  = Object.values(data.fullName);
+  const values  = Object.values(data.rates);
+  const shortNames = Object.keys(data.rates);
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App">
+
+      {fullNames.map((element:string,index:number) => {
+        return <PairBox 
+        shortName={`EUR${shortNames[index]}`}
+        fullName={`Euro / ${element}`}
+        value={values[index]}
+        />
+      })}
+
     </div>
   );
 }
